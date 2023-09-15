@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    body {
+        background-image: url('/images/as.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100dvh;
+
+    }
+    header {
+        background-color: #19253b59;
+        box-shadow: 0 0 36px 0;
+        backdrop-filter: blur(3px);
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 80%;
+        margin: auto;
+        padding: 1.2rem 0rem;
+    }
+    .logo {
+        font-size: 1.3rem;
+        font-weight: 800;
+    }
+    .logo a {
+        color: #fff;
+        text-decoration: none;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        padding: 0;
+        background-color: transparent;
+        overflow: hidden;
+    }
+    li {
+        padding: 0rem 1.1rem;
+        float: left;
+    }
+    li a {
+        color: #fff;
+        text-decoration: none;
+        font-family:'Poppins', sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: .7px;
+    }
+    li a:hover {
+        color: #91b2ff;
+        transition: all .3s ease-in-out
+    }
+    .button {
+        display: flex;
+        gap: 1rem;
+    }
+    .button button {
+        font-weight: 500;
+        color: #fff;
+        border: 1px solid #fff;
+        background-color: transparent;
+        padding: .5rem 1rem;
+        border-radius: 20%;
+        cursor: pointer;
+    }
+    .button button:hover {
+        background-color: #fff;
+        color: #152939;
+        transition: all .3s ease-in-out;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+            <a href="#">AgroTech E-commerce</a>
+            </div>
+            <ul>
+                <li><a href="about.html"><b>About</b></a></li>
+                <li><a href="register.php"><b>Sign-Up</b></a></li>
+                <li><a href="login.php"><b>Login</b></a></li>
+            </ul>
+            <div id="language-dropdown">
+                <select id="language-select" onchange="changeLanguage()">
+                    <option value="en">English</option>
+                    <option value="te">Telugu</option>
+                    <option value="hi">Hindi</option>
+                    <option value="ta">Tamil</option>
+                    <option value="ml">Malayalam</option>
+                    <option value="or">Oriya</option>
+                    <option value="kn">Kannada</option>
+                    <option value="as">Assamese</option>
+                    <option value="bn">Bengali</option>
+                    <option value="ks">Kashmiri</option>
+                    <option value="gu">Gujarati</option>
+                    <option value="pa">Punjabi</option>
+                    <option value="ur">Urdu</option>
+                    <option value="ne">Nepali</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+    <section><left>
+        <br>
+        <h2 style="text-align: left; color:white"><b><marquee behavior="scroll" direction="left" scrollamount="10">
+Online delivery of farm products from farmers to customers</marquee></h2>&nbsp;
+    </section>
+    <script>
+        function gtElInit() {
+            var lib = new google.translate.TranslateService();
+            var languageSelect = document.getElementById('language-select');
+            var selectedLanguage = localStorage.getItem('selectedLanguage');
+            if (selectedLanguage) {
+                languageSelect.value = selectedLanguage;
+                lib.translatePage('en', selectedLanguage, function () {});
+            } else {
+                selectedLanguage = languageSelect.value;
+                lib.translatePage('en', selectedLanguage, function () {});
+            }
+        }
+        function changeLanguage() {
+            var languageSelect = document.getElementById('language-select');
+            var selectedLanguage = languageSelect.value;
+            localStorage.setItem('selectedLanguage', selectedLanguage);
+            var lib = new google.translate.TranslateService();
+            lib.translatePage('en', selectedLanguage, function () {});
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=gtElInit&amp;hl='te'&amp;client=wt" type="text/javascript"></script>
+</body>
+</html>

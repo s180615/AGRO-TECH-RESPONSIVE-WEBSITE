@@ -1,0 +1,178 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Farm Product Delivery</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      background-image: url("/images/m.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100dvh;
+    }
+    header {
+            background-color: #19253b59;
+            box-shadow: 0 0 36px 0;
+            backdrop-filter: blur(3px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 80%;
+            margin: auto;
+            padding: 1.2rem 0rem;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+
+        .logo a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            padding: 0;
+            background-color: transparent;
+            overflow: hidden;
+        }
+
+        li {
+            padding: 0rem 1.1rem;
+            float: left;
+        }
+
+        li a {
+            color: #fff;
+            text-decoration: none;
+            font-family:'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: .7px;
+        }
+
+        li a:hover {
+            color: #91b2ff;
+            transition: all .3s ease-in-out
+        }
+    main {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    main h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    main p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .animated-cards {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 50px;
+    }
+    .animated-card {
+      width: 350px;
+      height: 250px;
+      background-color: #f7f7f7;
+      border: 1px solid #73e48f;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .animated-card:hover {
+      transform: translateY(-5px);
+      background-color: #73e48f;
+      border-color: #fff;
+      color: #fff;
+    }
+    .animated-card:hover h3,
+    .animated-card:hover p {
+      color: #fff;
+    }
+    .animated-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .animated-card p {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="home2.html">Agro Tech E-commerce.</a>
+      </div>
+      <ul>
+        <li class="home.html"><a href="/"><b>Home</b></a></li>
+        <li><a href="about.html"><b>About</b></a></li>
+       <li><a href="register.php"><b>Sign-Up</b></a></li>
+        <li><a href="login.php"><b>Login</b></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>About Us</h2>
+    <p>Welcome to our online platform that connects farmers and customers for the convenient delivery of farm products. Our mission is to support local farmers and provide customers with access to fresh and high-quality produce.</p>
+    <div class="animated-cards">
+      <div class="animated-card">
+        <h3>Wide Product Selection</h3>
+        <p>Discover a wide variety of farm-fresh products sourced directly from local farmers. Browse through categories such as fruits, vegetables, dairy, meat, and more.</p>
+      </div>
+      <div class="animated-card">
+        <h3>Convenient Ordering</h3>
+        <p>Order your favorite farm products with just a few clicks and enjoy hassle-free delivery to your doorstep. Choose from flexible delivery options and track your order in real-time.</p>
+      </div>
+      <div class="animated-card">
+        <h3>Quality Assurance</h3>
+        <p>We prioritize quality and freshness. Our team ensures that all the products undergo rigorous quality checks before they are delivered to your home, guaranteeing you the best farm produce.</p>
+      </div>
+      <div class="animated-card">
+        <h3>Direct from Farmers</h3>
+        <p>By choosing our platform, you directly support local farmers and their sustainable and ethical farming practices. Connect with the farmers, learn about their stories, and contribute to a healthier food system.</p>
+      </div>
+    </div>
+  </main>
+  <script>
+    function gtElInit() {
+        var lib = new google.translate.TranslateService();
+        var selectedLanguage = localStorage.getItem('selectedLanguage');
+        if (selectedLanguage) {
+            lib.translatePage('en', selectedLanguage, function(){});
+        }
+    }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=gtElInit&amp;hl='te'&amp;client=wt" type="text/javascript"></script>
+</body>
+
+</html>
